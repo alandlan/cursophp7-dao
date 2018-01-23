@@ -43,9 +43,9 @@ class Usuario {
 
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID",array(
+		$result = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID",array{
 		":ID"=>$id
-		));
+		});
 
 		if(count($results) > 0){
 
@@ -63,9 +63,9 @@ class Usuario {
 	public function __toString(){
 
 		return json_encode(array(
-			"idusuario"=>$this->getIdusuario(),
-			"deslogin"=>$this->getDeslogin(),
-			"dessenha"=>$this->getDessenha(),
+			"idusuario"=>$this->getIdusuario();
+			"deslogin"=>$this->getDeslogin();
+			"dessenha"=>$this->getDesenha();
 			"dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
 		));
 	}
