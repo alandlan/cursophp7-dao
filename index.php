@@ -35,6 +35,8 @@ echo $root;
 //$aluno->insert();
 //echo $aluno;
 
+/*
+//ALTERAR UM USUARIO
 $usuario = new Usuario();
 
 $usuario->loadByid(8);
@@ -42,6 +44,14 @@ $usuario->loadByid(8);
 $usuario->update("professor","!@#@%$%");
 
 echo $usuario;
+*/
 
+$usuario = new Usuario();
+
+$usuario->loadByid(7);
+
+$usuario->delete();
+
+echo $usuario;
 
  ?>}
